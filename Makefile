@@ -6,7 +6,7 @@
 #    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/01/16 12:32:20 by ibenhaim         ###   ########.fr        #
+#    Updated: 2023/01/20 15:34:58 by ibenhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,9 @@ HEADER		=	push_swap.h
 SRCS		=	push_swap.c \
 				utils.c \
 				swap.c \
+				push.c \
+				rotate.c \
+				
 				
 
 INCLUDES	=	includes/
