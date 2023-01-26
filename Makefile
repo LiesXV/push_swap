@@ -6,7 +6,7 @@
 #    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/01/20 15:34:58 by ibenhaim         ###   ########.fr        #
+#    Updated: 2023/01/25 15:10:59 by ibenhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRCS		=	push_swap.c \
 				swap.c \
 				push.c \
 				rotate.c \
+				reverse_rotate.c \
+				sort.c \
 				
 				
 

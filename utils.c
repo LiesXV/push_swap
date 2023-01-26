@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 11:12:55 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/16 14:04:29 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:25:42 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,4 @@ int	is_array_good(char **nbr)
 		i++;
 	}
 	return (1);
-}
-
-void	print_tabs(t_tab *tab)
-{
-	int	i;
-
-	i = tab->size;
-	while (i >= 0)
-	{
-		ft_printf("%d | ", tab->a[i]);
-		i--;
-	}
-	ft_printf("\n");
 }

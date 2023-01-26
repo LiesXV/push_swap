@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 13:12:42 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/20 15:10:18 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:54:55 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	push(t_list **a, t_list **b)
 
 void	push_a(t_list **a, t_list **b)
 {
-	push(a, b);
+	push(b, a);
 	// ft_lstprint(a);
 	// ft_lstprint(b);
 	ft_printf("pa\n");
@@ -32,7 +32,7 @@ void	push_a(t_list **a, t_list **b)
 
 void	push_b(t_list **a, t_list **b)
 {
-	push(b, a);
+	push(a, b);
 	// ft_lstprint(a);
 	// ft_lstprint(b);
 	ft_printf("pb\n");
