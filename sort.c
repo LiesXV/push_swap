@@ -57,12 +57,12 @@ void	radix(t_list **stack_a, t_list **stack_b, int lstsize)
 {
 	int		i;
 	int		j;
-	t_list	*tmp_a;
-	t_list	*tmp_b;
+//	t_list	*tmp_a;
+//	t_list	*tmp_b;
 
-	tmp_a = (*stack_a);
-	tmp_b = (*stack_b);
-	i = 1;
+//	tmp_a = (*stack_a);
+//	tmp_b = (*stack_b);
+	i = 0;
 	j = 0;
 	//ft_printf("on entre dans la cle-bou\n");
 	while (is_sorted((*stack_a)) == 0)
