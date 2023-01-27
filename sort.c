@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:11 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/26 18:18:14 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/27 14:37:53 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,19 +44,11 @@ int	init_index(t_list *lst)
 
 int	is_sorted(t_list *lst)
 {
-	int		content;
-	t_list	*tmp;
-
-	tmp = lst;
-	while (tmp)
+	while (lst)
 	{
-		content = tmp->content;
-		ft_printf("%d > %d ?\n", tmp->content, tmp->next->content);
-		if (tmp->index > tmp->next->index)
-		//	return (0);
-			return (ft_printf("oui\n"), 0);
-		ft_printf("non\n");
-		tmp = tmp->next;
+		if (lst->next != NULL && lst->index > lst->next->index)
+			return (0);
+		lst = lst->next;
 	}
 	return (1);
 }
@@ -72,20 +64,24 @@ void	radix(t_list **stack_a, t_list **stack_b, int lstsize)
 	tmp_b = (*stack_b);
 	i = 1;
 	j = 0;
-	ft_printf("on entre dans la cle-bou\n");
+	//ft_printf("on entre dans la cle-bou\n");
 	while (is_sorted((*stack_a)) == 0)
 	{
 		j = 0;
 		while (j < lstsize)
 		{
-			ft_lstprint((*stack_a));
-			if (((tmp_a->index >> i) & 1) == 0)
+			//ft_lstprint((*stack_a));
+			if ((((*stack_a)->index >> i) & 1) == 0)
 				push_b(stack_a, stack_b);
 			else
 				rotate_a(stack_a);
 			j++;
 		}
-		i *= 2;
+		i++;
+		while ((*stack_b))
+		{
+			push_a(stack_a, stack_b);
+		}
 	}
-	ft_printf("on sort du issorted\n");
+	//ft_printf("on sort du issorted\n");
 }
