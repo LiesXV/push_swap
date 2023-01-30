@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:10 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/27 14:38:50 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/30 11:29:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,9 @@ char	**get_args(int argc, char **argv)
 	char	*join;
 
 	i = 0;
-	join = malloc(sizeof(char));
+	join = ft_calloc(1, sizeof(char));
 	if (!join)
 		return (NULL);
-	join = "";
 	while (i < argc - 1)
 	{
 		join = ft_strjoin(join, argv[i + 1]);
@@ -80,24 +79,15 @@ int	main(int argc, char **argv)
 	char			**split;
 
 	i = 0;
-	//if (is_array_good(argv) == 0)
-	//	return (ft_printf("les valeurs envoyées ne sont pas valides\n"), 0);
 	a = NULL;
 	b = NULL;
-	//ft_printf("signal\n");
 	split = get_args(argc, argv);
-	//ft_printf("signal\n");
 	while (split[i])
 	{
-		//ft_printf("%s\n", split[i]);
 		i++;
 	}
-	//ft_printf("taille : %d\n", i);
-	//ft_printf("%s\n", split[i]);
 	a = fill_a(split, i);
-	//ft_printf("signal\n");
 	i = init_index(a);
-	//is_sorted(a);
 	radix (&a, &b, i);
 	//ft_lstprint(a);
 }
