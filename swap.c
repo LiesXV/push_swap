@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:22:07 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/20 14:43:22 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/30 16:25:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static void	swap(t_list *lst)
 {
 	int	temp;
 
-	lst = lst->next;
 	temp = lst->content;
 	lst->content = lst->next->content;
 	lst->next->content = temp;
@@ -34,9 +33,9 @@ void	swap_b(t_list *lst)
 	ft_printf("sb\n");
 }
 
-void	swap_s(t_list *a, t_list *b)
+void	swap_s(t_list *stack_a, t_list *stack_b)
 {
-	swap(a);
-	swap(b);
+	swap(stack_a);
+	swap(stack_b);
 	ft_printf("ss\n");
 }

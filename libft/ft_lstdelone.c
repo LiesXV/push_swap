@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 10:24:43 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/25 13:42:27 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/30 17:38:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst)
 {
 	if (lst)
 	{
-		(*del)(lst->content);
+		(lst->content);
 		free (lst);
 	}
 }

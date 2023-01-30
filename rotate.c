@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:23:16 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/20 15:36:45 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/30 14:29:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ static void	rotate(t_list **lst)
 	tail->next = tmp;
 }
 
-void	rotate_a(t_list **a)
+void	rotate_a(t_list **stack_a)
 {
-	rotate(a);
+	rotate(stack_a);
 	ft_printf("ra\n");
 }
 
-void	rotate_b(t_list **b)
+void	rotate_b(t_list **stack_b)
 {
-	rotate(b);
+	rotate(stack_b);
 	ft_printf("rb\n");
 }
 
-void	rotate_r(t_list **a, t_list **b)
+void	rotate_r(t_list **stack_a, t_list **stack_b)
 {
-	rotate(a);
-	rotate(b);
+	rotate(stack_a);
+	rotate(stack_b);
 	ft_printf("rr\n");
 }

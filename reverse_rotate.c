@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:42:49 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/25 14:06:28 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/30 14:29:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ void	reverse_rotate_b(t_list **lst)
 	ft_printf("rrb\n");
 }
 
-void	reverse_rotate_r(t_list **a, t_list **b)
+void	reverse_rotate_r(t_list **stack_a, t_list **stack_b)
 {
-	reverse_rotate(a);
-	reverse_rotate(b);
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
 	ft_printf("rrr\n");
 }

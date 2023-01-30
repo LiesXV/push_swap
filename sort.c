@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:11 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/27 14:37:53 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/01/30 14:25:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,20 +57,14 @@ void	radix(t_list **stack_a, t_list **stack_b, int lstsize)
 {
 	int		i;
 	int		j;
-//	t_list	*tmp_a;
-//	t_list	*tmp_b;
 
-//	tmp_a = (*stack_a);
-//	tmp_b = (*stack_b);
 	i = 0;
 	j = 0;
-	//ft_printf("on entre dans la cle-bou\n");
 	while (is_sorted((*stack_a)) == 0)
 	{
 		j = 0;
 		while (j < lstsize)
 		{
-			//ft_lstprint((*stack_a));
 			if ((((*stack_a)->index >> i) & 1) == 0)
 				push_b(stack_a, stack_b);
 			else
@@ -83,5 +77,4 @@ void	radix(t_list **stack_a, t_list **stack_b, int lstsize)
 			push_a(stack_a, stack_b);
 		}
 	}
-	//ft_printf("on sort du issorted\n");
 }

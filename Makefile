@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/01/25 15:10:59 by ibenhaim         ###   ########.fr        #
+#    Updated: 2023/01/30 15:43:24 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,12 @@ FLAGS		=	-Wall -Werror -Wextra
 
 HEADER		=	push_swap.h
 SRCS		=	push_swap.c \
-				utils.c \
 				swap.c \
 				push.c \
 				rotate.c \
 				reverse_rotate.c \
 				sort.c \
+				parsing.c \
 				
 				
 
