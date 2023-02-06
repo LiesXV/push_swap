@@ -64,7 +64,7 @@ static void	*freeyer(char **tab)
 		tab++;
 	}
 	free(tab);
-	return (tab);
+	return (NULL);
 }
 
 char	**if_error(char const *s)
