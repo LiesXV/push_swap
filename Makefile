@@ -6,12 +6,12 @@
 #    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/02/06 12:47:47 by ibenhaim         ###   ########.fr        #
+#    Updated: 2023/02/06 14:19:51 by ibenhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
-FLAGS		=	-Wall -Werror -Wextra
+FLAGS		=	-Wall -Werror -Wextra -g 
 
 HEADER		=	push_swap.h
 SRCS		=	push_swap.c \
@@ -22,7 +22,7 @@ SRCS		=	push_swap.c \
 				sort.c \
 				parsing.c \
 				sort_three.c \
-				
+				sort_five_four.c
 				
 				
 

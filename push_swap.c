@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:10 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 12:52:57 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:18:01 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 	while (split[i])
 		i++;
 	if (verif_args(split, i) == 0)
-		return (ft_putstr_fd("Error\n", 2), 0);
+		return (ft_putstr_fd("Error\n", 2), free_split(split), 0);
 	stack_a = fill_a(split, i);
 	free_split(split);
 	i = init_index(stack_a);

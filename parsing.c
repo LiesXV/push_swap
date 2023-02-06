@@ -82,9 +82,9 @@ t_list	*fill_a(char **args, int size)
 		else
 		{
 			cell = ft_lstnew(ft_atoi(args[i]));
-			ft_lstadd_back(&stack_a, cell);
 			if (!cell)
 				return (ft_lstclear(&stack_a), NULL);
+			ft_lstadd_back(&stack_a, cell);
 		}
 		i++;
 	}

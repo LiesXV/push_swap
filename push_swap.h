@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:53 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 12:51:56 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/06 13:16:00 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int		init_index(t_list *lst);
 int		is_sorted(t_list *lst);
 void	radix(t_list **stack_a, t_list **stack_b, int lstsize);
 void	sort_three_nbr(t_list **list);
+void	sort_four_nbr(t_list **list_a, t_list **list_b);
+void	sort_five_nbr(t_list **list_a, t_list **list_b);
 void	sort(t_list **stack_a, t_list **stack_b, int argc);
 
 //					INSTRUCTIONS

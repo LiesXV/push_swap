@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:43:36 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 12:54:28 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:13:41 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,25 @@
 
 void	sort_three_nbr(t_list **list)
 {
-	t_list	*list_a;
-
-	list_a = *list;
-	if (list_a->content > list_a->next->next->content && \
-		list_a->next->next->content > list_a->next->content)
-		rotate_a(&list_a);
-	if (list_a->content > list_a->next->content && \
-		list_a->next->content > list_a->next->next->content)
-		swap_a(list_a);
-	if (list_a->content > list_a->next->content)
-		swap_a(list_a);
-	else if (list_a->content > list_a->next->next->content)
-		reverse_rotate_a(&list_a);
-	else if (list_a->next->content > list_a->next->next->content)
+	if ((*list)->content > (*list)->next->next->content && \
+		(*list)->next->next->content > (*list)->next->content)
+		rotate_a(list);
+	if ((*list)->content > (*list)->next->content && \
+		(*list)->next->content > (*list)->next->next->content)
+		swap_a((*list));
+	if ((*list)->content > (*list)->next->content)
+		swap_a((*list));
+	else if ((*list)->content > (*list)->next->next->content)
+		reverse_rotate_a(list);
+	else if ((*list)->next->content > (*list)->next->next->content)
 	{
-		swap_a(list_a);
-		rotate_a(&list_a);
+		swap_a((*list));
+		rotate_a(list);
 	}
-	if (list_a->next->content > list_a->next->next->content)
+	if ((*list)->next->content > (*list)->next->next->content)
 	{
-		rotate_a(&list_a);
-		swap_a(list_a);
-		reverse_rotate_a(&list_a);
+		rotate_a(list);
+		swap_a((*list));
+		reverse_rotate_a(list);
 	}
 }

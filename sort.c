@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:11 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 12:52:44 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:09:49 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	sort(t_list **stack_a, t_list **stack_b, int argc)
 		swap_a((*stack_a));
 	else if (argc == 3)
 		sort_three_nbr(stack_a);
+	else if (argc == 4)
+		sort_four_nbr(stack_a, stack_b);
+	else if (argc == 5)
+		sort_five_nbr(stack_a, stack_b);
 	else if (argc > 5)
 		radix(stack_a, stack_b, argc);
 }
