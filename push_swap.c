@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:10 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/30 18:03:57 by marvin           ###   ########.fr       */
+/*   Updated: 2023/02/06 12:52:57 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ int	main(int argc, char **argv)
 	stack_a = fill_a(split, i);
 	free_split(split);
 	i = init_index(stack_a);
-	if (i > 6)
-		radix (&stack_a, &stack_b, i);
-	else if (i == 2 && !is_sorted(stack_a))
-		swap_a(stack_a);
+	if (!is_sorted(stack_a))
+		sort(&stack_a, &stack_b, i);
 	ft_lstclear(&stack_a);
 }

@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:11 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/30 14:25:49 by marvin           ###   ########.fr       */
+/*   Updated: 2023/02/06 12:52:44 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort(t_list **stack_a, t_list **stack_b, int argc)
+{
+	if (argc == 2)
+		swap_a((*stack_a));
+	else if (argc == 3)
+		sort_three_nbr(stack_a);
+	else if (argc > 5)
+		radix(stack_a, stack_b, argc);
+}
 
 int	fill_index(t_list *lst, int content)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:53 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/01/30 16:41:12 by marvin           ###   ########.fr       */
+/*   Updated: 2023/02/06 12:51:56 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	free_split(char **split);
 int		init_index(t_list *lst);
 int		is_sorted(t_list *lst);
 void	radix(t_list **stack_a, t_list **stack_b, int lstsize);
+void	sort_three_nbr(t_list **list);
+void	sort(t_list **stack_a, t_list **stack_b, int argc);
 
 //					INSTRUCTIONS
 

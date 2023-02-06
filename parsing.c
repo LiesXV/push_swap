@@ -19,10 +19,10 @@ char	**get_args(int argc, char **argv)
 	char	*join;
 	char	*tmp;
 
-	i = 0;
+	i = -1;
 	join = "";
 	tmp = "";
-	while (i < argc - 1)
+	while (++i < argc - 1)
 	{
 		if (i > 0)
 			free(join);
@@ -34,14 +34,11 @@ char	**get_args(int argc, char **argv)
 		tmp = ft_strjoin(join, " ");
 		if (!tmp)
 			return (free(join), NULL);
-		i++;
 	}
 	result = ft_split(tmp, ' ');
-	free(tmp);
-	free(join);
 	if (!result)
-		return (NULL);
-	return (result);
+		return (free(tmp), free(join), NULL);
+	return (free(tmp), free(join), result);
 }
 
 int	verif_args(char	**args, int size)

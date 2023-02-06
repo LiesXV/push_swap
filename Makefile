@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/01/30 15:43:24 by marvin           ###   ########.fr        #
+#    Updated: 2023/02/06 12:47:47 by ibenhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SRCS		=	push_swap.c \
 				reverse_rotate.c \
 				sort.c \
 				parsing.c \
+				sort_three.c \
+				
 				
 				
 
