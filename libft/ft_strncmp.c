@@ -6,13 +6,13 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:56:27 by ibenhaim          #+#    #+#             */
-/*   Updated: 2022/11/23 13:07:48 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:27:38 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t max)
+int	ft_strncmp(const char *s1, const char *s2)
 {
 	size_t			i;
 	unsigned char	*new_s1;
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t max)
 	i = 0;
 	new_s1 = (unsigned char *)s1;
 	new_s2 = (unsigned char *)s2;
-	while (i < max)
+	while (new_s1[i] && new_s2[i])
 	{
 		if (new_s1[i] == new_s2[i] && new_s1[i] && new_s2[i])
 			i++;

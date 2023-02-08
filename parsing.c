@@ -41,6 +41,26 @@ char	**get_args(int argc, char **argv)
 	return (free(tmp), free(join), result);
 }
 
+int	check_double(char *element, char **args, int size)
+{
+	int	i;
+	int	test;
+
+	test = 0;
+	i = 0;
+	while (i < size)
+	{
+		if (ft_strncmp(element, args[i]) == 0)
+		{
+			test++;
+			if (test == 2)
+				return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+
 int	verif_args(char	**args, int size)
 {
 	int	i;
@@ -60,6 +80,8 @@ int	verif_args(char	**args, int size)
 			j++;
 		}
 		if (ft_atoll(args[i]) > INT_MAX || ft_atoll(args[i]) < INT_MIN)
+			return (0);
+		if (check_double(args[i], args, size) == 0)
 			return (0);
 		i++;
 	}

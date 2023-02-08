@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:02:38 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/08 12:12:47 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:28:15 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
-int				strncmp(const char *s1, const char *s2, size_t max);
-int				ft_strncmp(const char *s1, const char *s2, size_t max);
+int				ft_strncmp(const char *s1, const char *s2);
 char			*ft_strnstr(const char *str, const char *find, size_t len);
 int				ft_atoi(const char *str);
 long long int	ft_atoll(const char *str);
