@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:53 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 13:16:00 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:58:40 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "./libft/libft.h"
+# include <limits.h>
 
 void	ft_lstprint(t_list *lst);
 

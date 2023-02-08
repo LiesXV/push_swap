@@ -59,6 +59,8 @@ int	verif_args(char	**args, int size)
 				return (0);
 			j++;
 		}
+		if (ft_atoi(args[i]) > INT_MAX || ft_atoi(args[i]) < INT_MIN)
+			return (0);
 		i++;
 	}
 	return (1);

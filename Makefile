@@ -6,12 +6,12 @@
 #    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/02/06 14:19:51 by ibenhaim         ###   ########.fr        #
+#    Updated: 2023/02/06 16:02:48 by ibenhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
-FLAGS		=	-Wall -Werror -Wextra -g 
+FLAGS		=	-Wall -Werror -Wextra
 
 HEADER		=	push_swap.h
 SRCS		=	push_swap.c \
