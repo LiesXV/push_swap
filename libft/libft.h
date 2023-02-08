@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:02:38 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/08 11:56:50 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:12:47 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ int				ft_putnbr(int nb);
 int				ft_putpurcent(void);
 int				ft_printf(const char *s, ...);
 int				ft_putunsigned(unsigned int n);
-void			ft_putnb_base(long long unsigned int nbr, long long unsigned int size,
-					char *base, int *count);
-int				ft_printptr(unsigned long long int nbr, unsigned long long int size,
-					char *base);
+void			ft_putnb_base(long long unsigned int nbr,
+					long long unsigned int size, char *base, int *count);
+int				ft_printptr(unsigned long long int nbr,
+					unsigned long long int size, char *base);
 char			*get_next_line(int fd);
 
 #endif
