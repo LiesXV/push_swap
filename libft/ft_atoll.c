@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 10:46:49 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/08 11:44:01 by ibenhaim         ###   ########.fr       */
+/*   Created: 2023/02/08 11:50:19 by ibenhaim          #+#    #+#             */
+/*   Updated: 2023/02/08 11:54:20 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long long int	ft_atoll(const char *str)
 {
-	size_t		i;
-	long long	result;
-	int			sign;
+	size_t			i;
+	long long int	result;
+	int				sign;
 
 	i = 0;
 	result = 0;
@@ -37,5 +37,5 @@ int	ft_atoi(const char *str)
 		result = result + ((int)str[i] - 48) * sign;
 		i++;
 	}
-	return ((int)result);
+	return (result);
 }

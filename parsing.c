@@ -59,7 +59,7 @@ int	verif_args(char	**args, int size)
 				return (0);
 			j++;
 		}
-		if (ft_atoi(args[i]) > INT_MAX || ft_atoi(args[i]) < INT_MIN)
+		if (ft_atoll(args[i]) > INT_MAX || ft_atoll(args[i]) < INT_MIN)
 			return (0);
 		i++;
 	}
@@ -77,13 +77,13 @@ t_list	*fill_a(char **args, int size)
 	{
 		if (i == 0)
 		{
-			stack_a = ft_lstnew(ft_atoi(args[i]));
+			stack_a = ft_lstnew(ft_atoll(args[i]));
 			if (!stack_a)
 				return (ft_lstclear(&stack_a), NULL);
 		}
 		else
 		{
-			cell = ft_lstnew(ft_atoi(args[i]));
+			cell = ft_lstnew(ft_atoll(args[i]));
 			if (!cell)
 				return (ft_lstclear(&stack_a), NULL);
 			ft_lstadd_back(&stack_a, cell);
