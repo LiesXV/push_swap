@@ -41,22 +41,22 @@ char	**get_args(int argc, char **argv)
 	return (free(tmp), free(join), result);
 }
 
-int	check_double(char *element, char **args, int size)
+int	check_duplicate(t_list *list)
 {
-	int	i;
-	int	test;
+	t_list		*tmp_list;
+	int			tmp;
 
-	test = 0;
-	i = 0;
-	while (i < size)
+	while (list)
 	{
-		if (ft_strncmp(element, args[i]) == 0)
+		tmp = list->content;
+		list = list->next;
+		tmp_list = list;
+		while (tmp_list)
 		{
-			test++;
-			if (test == 2)
+			if (tmp == tmp_list->content)
 				return (0);
+			tmp_list = tmp_list->next;
 		}
-		i++;
 	}
 	return (1);
 }
@@ -80,8 +80,6 @@ int	verif_args(char	**args, int size)
 			j++;
 		}
 		if (ft_atoll(args[i]) > INT_MAX || ft_atoll(args[i]) < INT_MIN)
-			return (0);
-		if (check_double(args[i], args, size) == 0)
 			return (0);
 		i++;
 	}

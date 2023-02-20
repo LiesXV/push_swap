@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 10:18:53 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 15:58:40 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/20 11:41:20 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char	**get_args(int argc, char **argv);
 t_list	*fill_a(char **args, int size);
 int		verif_args(char	**args, int size);
 void	free_split(char **split);
+int		check_duplicate(t_list *list);
 
 //					SORTING
 
