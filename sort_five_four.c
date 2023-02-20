@@ -6,7 +6,7 @@
 /*   By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:09:34 by ibenhaim          #+#    #+#             */
-/*   Updated: 2023/02/06 15:37:50 by ibenhaim         ###   ########.fr       */
+/*   Updated: 2023/02/09 11:55:04 by ibenhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,4 @@ void	sort_four_nbr(t_list **list_a, t_list **list_b)
 	push_smallest(list_a, list_b);
 	sort_three_nbr(list_a);
 	push_a(list_a, list_b);
-	ft_lstclear(list_a);
 }
