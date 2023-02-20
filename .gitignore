@@ -1,5 +1,6 @@
 *.log
 *.o
-push_swap
+push_swap_tester/*
 checker
 *.a
+push_swap_tester
