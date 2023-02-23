@@ -6,7 +6,7 @@
 #    By: ibenhaim <ibenhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 13:10:41 by ibenhaim          #+#    #+#              #
-#    Updated: 2023/02/06 16:02:48 by ibenhaim         ###   ########.fr        #
+#    Updated: 2023/02/23 14:24:33 by ibenhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,6 @@ DIR_SRCS	= 	srcs/
 DIR_LIB		=	libft/
 DIR_OBJS	=	objs/
 
-LIBFT		=	$(DIR_LIB)libft.a
-
 SRC 		= 	$(addprefix ${DIR_SRCS}, ${SRCS})
 
 OBJS		= 	${SRCS:.c=.o}
@@ -42,7 +40,8 @@ LFTNAME		= 	libft.a
 %.o:%.c	${HEADER} ${DIR_LIB}libft.h
 				${CC} ${FLAGS} -c $< -o $@
 
-${NAME}		: $(LIBFT) ${OBJS}
+${NAME}		: ${OBJS} $(HEADER) $(DIR_LIB)libft.h
+				make -C libft
 				${CC} ${FLAGS} ${OBJS} ${DIR_LIB}${LFTNAME} -o ${NAME}
 
 all : ${NAME}
